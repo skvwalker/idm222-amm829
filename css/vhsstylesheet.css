@@ -136,7 +136,7 @@
     }
 
     /*--Video--*/
-    div.vid {
+    .banner {
         display: flex;
         position: sticky;
         left: 0;
@@ -152,6 +152,7 @@
     video {
         width: 100%;
         height: 100%;
+
     }
 
 }
