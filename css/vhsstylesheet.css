@@ -5,7 +5,6 @@
 @media (max-width: 375px) {
 
     body {
-        background: #272727;
         display: flex;
         width: 375px;
         height: auto;
@@ -14,21 +13,31 @@
         align-items: center;
     }
 
+    /*--Background--*/
+    .background {
+        display: all;
+        z-index: 0;
+        position: absolute;
+        justify-content: flex-start;
+        width: 100%;
+        background-size: cover;
+    }
+
     /*--Burger--*/
     .menu-btn {
+        display: flex;
         position: fixed;
-        display: all;
         left: 275px;
         width: 30px;
         height: 30px;
-        cursor: pointer;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         transition: all .5s ease-in-out;
-        z-index: 1;
+        z-index: 2;
     }
 
     .menu-btn .honeymustard {
+        display: block;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -38,21 +47,23 @@
     }
 
     .burger {
+        display: block;
+        position: relative;
         height: 3px;
-        width: 75%;
+        width: 65%;
         background-color: white;
         border-radius: 4px;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
-        display: flex;
         transition: all .5s ease-in-out;
     }
 
     .burger::before,
     .burger::after {
         content: '';
+        display: block;
         position: absolute;
         height: 3px;
-        width: 75%;
+        width: 100%;
         background-color: white;
         border-radius: 4px;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
@@ -99,7 +110,7 @@
         display: flex;
         width: 150px;
         height: 50px;
-        align-items: center;
+        align-items: ;
         justify-content: center;
         position: relative;
         right: 50px;
@@ -126,7 +137,7 @@
         height: 375px;
         justify-content: center;
         align-items: center;
-        z-index: 2;
+        z-index: 1;
     }
 
     .banner {
@@ -134,12 +145,7 @@
         height: 100%;
     }
 
-    /*--Background--*/
-    .background {
-        z-index: 0;
-        position: relative;
-        right: 375px;
-    }
+
 
 }
 
@@ -148,9 +154,12 @@
 
     /*--Background--*/
     .background {
+        display: all;
         z-index: 0;
-        position: relative;
-        right: 375px;
+        position: absolute;
+        justify-content: flex-start;
+        width: 100%;
+        background-size: cover repeat;
     }
 
 }
@@ -160,9 +169,12 @@
 
     /*--Background--*/
     .background {
+        display: all;
         z-index: 0;
-        position: relative;
-        right: 375px;
+        position: absolute;
+        justify-content: flex-start;
+        width: 100%;
+        background-size: cover repeat;
     }
 
 }
