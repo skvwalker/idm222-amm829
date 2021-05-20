@@ -1,0 +1,185 @@
+@media (max-width: 375px) {
+    body {
+        background-image: url(../images/vhs_background.jpg);
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 1;
+    }
+
+    div.picture {
+    display: flex;
+    flex: left;
+    width: 45%;
+    min-height: auto;
+    z-index: 1;
+    right: 50px;
+    justify-content: center;
+    align-items: center;
+    }
+
+    img.vhs {
+        width: 100px;
+        height: auto;
+    }
+
+    div.bio {
+        clear: both;
+    }
+}
+
+/*--iPad Screen--*/
+@media (max-width: 768px) {
+
+}
+
+/*--Laptop--*/
+
+body {
+    background-image: url(../images/vhs_background.jpg);
+    display: grid;
+    grid-template-rows: 3; 
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    filter: grayscale(100%);
+}
+
+*--Laptop Screen--*/
+    
+    body {
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+/*--Burger--*/
+    .menu-btn {
+        display: flex;
+        position: fixed;
+        left: 1250px;
+        top: 8px;
+        width: 30px;
+        height: 30px;
+        justify-content: right;
+        align-items: center;
+        align-content: flex-start;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+    }
+
+    .menu-btn .honeymustard {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        height: 3px;
+        width: 65%;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+        transition: all .5s ease-in-out;
+    }
+
+    .burger::before,
+    .burger::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+        display: flex;
+        transition: all .5s ease-in-out;
+    }
+
+    .burger::before {
+        transform: translateY(-5px);
+    }
+
+    .burger::after {
+        transform: translateY(5px);
+    }
+
+/*--Toggle Animate--*/
+    .menu-btn .honeymustard:checked + .burger {
+        background: transparent;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0);
+    }
+
+    .menu-btn .honeymustard:checked + .burger::before {
+        transform: rotate(45deg)
+    }
+
+    .menu-btn .honeymustard:checked + .burger::after {
+        transform: rotate(-45deg)
+    }
+
+/*--Nav Animation--*/
+    .menu-btn .honeymustard:checked + nav {
+        display: all
+    }
+
+/*--Header--*/
+    img.vhs {
+        display: flex;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        justify-content: flex-start;
+        flex-direction: row;
+        z-index: 2;
+        clear: right;
+    }
+
+    header {
+        display: flex;
+        position: absolute;
+        left: 50px;
+        width: 150px;
+        height: 50px;
+        align-items: center;
+        z-index: 2;
+    }
+        
+    h1 {
+        display: flex;
+        font-size: xx-small;
+        color: rgb(255, 255, 255);
+        text-shadow: 5px 5px 10px #272727;
+        font-family: 'Press Start 2P', cursive;
+        justify-content: center;
+    }
+
+div.picture {
+display: flex;
+flex: left;
+width: 45%;
+min-height: auto;
+z-index: 1;
+right: 50px;
+justify-content: center;
+align-items: center;
+}
+
+img.vhs {
+    width: 100px;
+    height: auto;
+}
+
+p {
+    clear: both;
+}

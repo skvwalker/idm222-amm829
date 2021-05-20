@@ -1,11 +1,4 @@
-/*--Resets--*/
-* {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-}
-
-/*--Media Queries--*/
+ /*--Media Queries--*/
 /*--iPhone Screen--*/
 /*--You can leave out "all as" the defualt is all--*/
 @media (max-width: 375px) {
