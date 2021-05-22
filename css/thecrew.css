@@ -1,31 +1,5 @@
 @media (max-width: 375px) {
-    body {
-        background-image: url(../images/vhs_background.jpg);
-        display: flex;
-        width: 100%;
-        min-height: 100vh;
-        z-index: 1;
-    }
 
-    div.picture {
-    display: flex;
-    flex: left;
-    width: 45%;
-    min-height: auto;
-    z-index: 1;
-    right: 50px;
-    justify-content: center;
-    align-items: center;
-    }
-
-    img.vhs {
-        width: 100px;
-        height: auto;
-    }
-
-    div.bio {
-        clear: both;
-    }
 }
 
 /*--iPad Screen--*/
@@ -37,33 +11,26 @@
 
 body {
     background-image: url(../images/vhs_background.jpg);
-    display: grid;
-    grid-template-rows: 3; 
-    width: 100%;
-    min-height: 100vh;
-    z-index: 1;
-    filter: grayscale(100%);
+    width: 100vh;
+    min-height: auto;
+    z-index: 0;
+    background-color: grayscale(100%);
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
-*--Laptop Screen--*/
-    
-    body {
-        display: flex;
-        width: 100%;
-        min-height: 100vh;
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
-    }
+.container {
+    display: all;
+}
 
 /*--Burger--*/
     .menu-btn {
         display: flex;
         position: fixed;
-        left: 1250px;
+        left: 1560px;
         top: 8px;
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         justify-content: right;
         align-items: center;
         align-content: flex-start;
@@ -128,48 +95,89 @@ body {
         transform: rotate(-45deg)
     }
 
+    .houdini {
+        display: flex;
+        /*--visibility: hidden;--*/
+        width: 30%;
+        height: 100vh;
+        background-color: #272727;
+        justify-content: end;
+        /*--transform: scale(0);--*/
+        z-index: 3;
+
+    }
+
+    .container .houdini > ul > li {
+        list-style: none;
+        color: white;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    .container .houdini > ul > li > a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .menu-btn .honeymustard:checked + div.houdini {
+        opacity: 1;
+        animation: moveleft 3s ease-in-out 2s infinite alternate;
+    }
+
+/*--Keyframes--*/
+
+    @keyframes moveleft {
+        from {
+        margin-right: 20%;
+        }
+        to {
+        margin-right: 60%;
+        }
+    }
+
 /*--Nav Animation--*/
     .menu-btn .honeymustard:checked + nav {
         display: all
     }
 
 /*--Header--*/
+
+    header {
+        display: grid;
+        grid-template-columns: .078% .039% 99.84% .039%;
+        justify-content: flex-start;
+        z-index: 2;
+        border: 1px solid blue;
+    }
+    
     img.vhs {
-        display: flex;
-        position: absolute;
+        display: grid;
         width: 50px;
         height: 50px;
         justify-content: flex-start;
-        flex-direction: row;
-        z-index: 2;
-        clear: right;
-    }
-
-    header {
-        display: flex;
-        position: absolute;
-        left: 50px;
-        width: 150px;
-        height: 50px;
-        align-items: center;
         z-index: 2;
     }
         
     h1 {
-        display: flex;
+        display: grid;
         font-size: xx-small;
         color: rgb(255, 255, 255);
         text-shadow: 5px 5px 10px #272727;
         font-family: 'Press Start 2P', cursive;
         justify-content: center;
+        width: 150px;
+        height: 50px;
+        align-items: center;
+        z-index: 2;
     }
 
 div.picture {
 display: flex;
 flex: left;
-width: 45%;
+width: 30%;
 min-height: auto;
-z-index: 1;
+z-index: 2;
 right: 50px;
 justify-content: center;
 align-items: center;
@@ -182,4 +190,11 @@ img.vhs {
 
 p {
     clear: both;
+}
+
+/*--Socials--*/
+
+img.social {
+    width: 100px;
+    height: auto;
 }
