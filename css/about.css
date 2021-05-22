@@ -186,6 +186,15 @@ padding: 150px;
     font-size: 13px;
     line-height: 30px;
     text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+
 }
 
 /*--Footer--*/
@@ -224,3 +233,32 @@ padding: 150px;
         width: 50px;
         height: auto;
     }
+
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        padding: 80px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        padding: 80px;
+        width: 100%;
+    }
+}

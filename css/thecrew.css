@@ -17,6 +17,10 @@ body {
     background-color: grayscale(100%);
     background-size: cover; 
     background-repeat: no-repeat;
+    grid-template-areas:
+    'header header header .menu-btn'
+    'div.container div.container'
+    'footer footer footer';
 }
 
 .container {
@@ -145,7 +149,7 @@ body {
 
     header {
         display: grid;
-        grid-template-columns: .078% .039% 99.84% .039%;
+        grid-template-columns: 3 1f 2f 4f;
         justify-content: flex-start;
         z-index: 2;
         border: 1px solid blue;
@@ -159,16 +163,14 @@ body {
         z-index: 2;
     }
         
-    h1 {
+    header h1 {
         display: grid;
         font-size: xx-small;
         color: rgb(255, 255, 255);
         text-shadow: 5px 5px 10px #272727;
         font-family: 'Press Start 2P', cursive;
-        justify-content: center;
         width: 150px;
         height: 50px;
-        align-items: center;
         z-index: 2;
     }
 
@@ -192,9 +194,39 @@ p {
     clear: both;
 }
 
-/*--Socials--*/
+/*--Footer--*/
+    /*--E-Mail--*/
+        img.email {
+            width: 50px;
+            height: auto;
+        }
+    /*--Connect--*/
+        img.socials {
+            width: 50px;
+            height: auto;
+        }
 
-img.social {
-    width: 100px;
-    height: auto;
-}
+        img.ig {
+            width: 20px;
+            height: auto;
+        }
+
+        img.tiktok {
+            width: 20px;
+            height: auto;
+        }
+
+        img.twitter {
+            width: 20px;
+            height: auto;
+        }
+
+        img.youtube {
+            width: 20px;
+            height: auto;
+        }
+    /*--Copyright--*/
+        img.copyright {
+            width: 50px;
+            height: auto;
+        }
